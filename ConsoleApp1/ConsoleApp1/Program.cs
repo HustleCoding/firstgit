@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.Text;
 
 namespace ConsoleApp1
@@ -63,6 +64,12 @@ namespace ConsoleApp1
 
             int awesomeInt = 12345667;
             string intToString = awesomeInt.ToString();
+
+            CultureInfo culture = new CultureInfo("tr-TR");
+            string awesomeCulture = awesomeInt.ToString("C", culture);
+
+            string interpolated = $"This is an {awesomeInt}, in tr-TR culture is: {awesomeCulture}";
+            Console.WriteLine(interpolated);
         }
     }
 }
