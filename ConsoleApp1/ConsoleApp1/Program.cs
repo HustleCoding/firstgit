@@ -49,6 +49,20 @@ namespace ConsoleApp1
 
             stopWatch1.Stop();
             Console.WriteLine("For StringBuilder" + stopWatch1.Elapsed);
+
+            string path = "C:/Program Files/Windows";
+            string programFiles = path.Substring(2, 13);
+            string rest = path.Substring(3);
+            // program files without giving the length
+            string pFiles = path.Substring(path.IndexOf("/", path.LastIndexOf("/")));
+
+            var splitted = path.Split('/');
+
+            string replaced = path.Replace("/", "//");
+            string removed = path.Remove(14);
+
+            int awesomeInt = 12345667;
+            string intToString = awesomeInt.ToString();
         }
     }
 }
